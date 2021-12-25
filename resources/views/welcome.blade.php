@@ -98,45 +98,65 @@
 
                             <!-- CREATE BEANS FORM -->
                             <div class="ml-12">
-                                <form action="beans" method="POST" class="form-control">
 
-                                    <!-- Name field -->
-                                    <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">NAME :
-                                        <input type="text" name="name" class="border-t border-r md:border-l" value="{{ old('name') }}">
-                                    <!-- //Shows error message "The name field is required" -->
-                                        <div>
-                                            {{ $errors->first('name') }}
-                                        </div>
-                                    </div>
+                                    <!-- SUBMIT button -->
+                                    <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                                        <div class="grid grid-cols-1 md:grid-cols-1">
+                                            <div class="p-6">
+                                                <div class="flex items-center">
+                                                    <form action="beans" method="POST" class="form-control">
 
-                                    <!-- Caffeine Level field -->
-                                    <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">CAFFEINE LEVEL :
-                                        <select class="form-control" name="caffeine_level" value="{{ old('caffeine_level') }}">
-                                            <option selected value="" disabled>SELECT</option>
-                                            <option value="decaf">Decaf</option>
-                                            <option value="low">Low</option>
-                                            <option value="medium">Medium</option>
-                                            <option value="high">High</option>
-                                        </select>
-                                        <div>
-                                            {{ $errors->first('caffeine_level') }}
+                                                        <!-- Name field -->
+                                                        <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">NAME :
+                                                            <input type="text" name="name" class="border-t border-r md:border-l" value="{{ old('name') }}">
+                                                        <!-- //Shows error message "The name field is required" -->
+                                                            <div>
+                                                                {{ $errors->first('name') }}
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- CAFFEINE LEVEL field -->
+                                                        <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">CAFFEINE LEVEL :
+                                                            <select class="form-control" name="caffeine_level" value="{{ old('caffeine_level') }}">
+                                                                <option selected value="" disabled>SELECT</option>
+                                                                <option value="decaf">Decaf</option>
+                                                                <option value="low">Low</option>
+                                                                <option value="medium">Medium</option>
+                                                                <option value="high">High</option>
+                                                            </select>
+                                                            <div>
+                                                                {{ $errors->first('caffeine_level') }}
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- COST field -->
+                                                        <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">COST :
+                                                            <input type="text" name="cost" class="border-t border-r md:border-l" value="{{ old('cost') }}"></input><span style="margin-left:10px;">/lb</span>
+                                                        </div>
+                                                        <div>
+                                                            {{ $errors->first('cost') }}
+                                                        </div>
+
+                                                        <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">BEAN TYPE :
+                                                            <select class="form-control" name="bean_type" value="{{ old('bean_type') }}">
+                                                                <option selected value="" disabled>SELECT</option>
+                                                                <option value="Arabica">ARABICA</option>
+                                                                <option value="Robusta">ROBUSTA</option>
+                                                                <option value="Liberca">LIBERCA</option>
+                                                                <option value="Excelsa">EXCELSA</option>
+                                                                <option value="Other">OTHER</option>
+                                                            </select>
+                                                            <div>
+                                                                {{ $errors->first('bean_type') }}
+                                                            </div>
+                                                        </div>
+                                                    <button type="submit">Submit</button>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">COST :
-                                        <input type="text" name="cost" class="border-t border-r md:border-l"></input><span style="margin-left:10px;">/lb</span>
-                                    </div>
-                                    <div>
-                                        {{ $errors->first('cost') }}
-                                    </div>
-                                    <div>
-                                        <button type="submit">Submit</button>
                                     </div>
                                     @csrf
                                 </form>
-
-                                <!-- <div class="mt-2 text-gray-600 dark:text-gray-400 border text-sm">
-
-                                </div> -->
                             </div>
                         </div>
 

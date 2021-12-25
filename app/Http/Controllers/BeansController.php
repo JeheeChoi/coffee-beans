@@ -27,7 +27,8 @@ class BeansController extends Controller
         $data = request()->validate([
             'name' => 'required',
             'caffeine_level' => 'required',
-            'cost' => 'required|numeric'
+            'cost' => 'required|numeric',
+            'bean_type' => 'required'
         ]);
 
         // dd(request('name'));
@@ -35,6 +36,7 @@ class BeansController extends Controller
         $CoffeeBean->name = request('name');
         $CoffeeBean->caffeine_level = request('caffeine_level');
         $CoffeeBean->cost = request('cost');
+        $CoffeeBean->bean_type = request('bean_type');
         $CoffeeBean->save();
 
         return back();

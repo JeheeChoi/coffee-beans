@@ -18,6 +18,7 @@ class CreateCoffeeBeansTable extends Migration
             $table->string('name');
             $table->string('caffeine_level');
             $table->decimal('cost');
+            $table->string('bean_type');
             $table->timestamps();
         });
     }
