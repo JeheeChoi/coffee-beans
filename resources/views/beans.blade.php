@@ -2,11 +2,9 @@
 
 @section('content')
 
-    <ul>
         @foreach ($beans as $beans)
         <!-- Only shows coffee beans' name attritube on the page -->
-        <li>{{ $beans->name }}</li>
+        <li>{{ $beans->name }} ({{ $beans->caffeine_level}})</li>
         @endforeach
-    </ul>
 
 @endsection

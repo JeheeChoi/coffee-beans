@@ -16,6 +16,7 @@ class CreateCoffeeBeansTable extends Migration
         Schema::create('coffee_beans', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('caffeine_level');
             $table->timestamps();
         });
     }

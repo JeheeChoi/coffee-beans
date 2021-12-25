@@ -23,9 +23,16 @@ class BeansController extends Controller
 // POST AND UPDATE INDEX COFFEE BEANS
     public function store()
     {
+        // input value 'name' is required in order to POST a new CoffeeBean
+        $data = request()->validate([
+            'name' => 'required',
+            'caffeine_level' => 'required'
+        ]);
+
         // dd(request('name'));
         $CoffeeBean = new CoffeeBean();
         $CoffeeBean->name = request('name');
+        $CoffeeBean->caffeine_level = request('caffeine_level');
         $CoffeeBean->save();
 
         return back();
