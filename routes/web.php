@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Simplified version of get page
-// First argument - url, second argument - view
-Route::view('/', 'welcome');
+// Landing Page - INDEX beans
+Route::get('/', 'App\Http\Controllers\BeansController@list');
 
-// Get request for beans and return the view of beans
+// First argument - url, second argument - view
 Route::get('beans', 'App\Http\Controllers\BeansController@list');
+
+// CREATE - Beans
+Route::post('beans', 'App\Http\Controllers\BeansController@store');
