@@ -26,13 +26,15 @@ class BeansController extends Controller
         // input value 'name' is required in order to POST a new CoffeeBean
         $data = request()->validate([
             'name' => 'required',
-            'caffeine_level' => 'required'
+            'caffeine_level' => 'required',
+            'cost' => 'required|numeric'
         ]);
 
         // dd(request('name'));
         $CoffeeBean = new CoffeeBean();
         $CoffeeBean->name = request('name');
         $CoffeeBean->caffeine_level = request('caffeine_level');
+        $CoffeeBean->cost = request('cost');
         $CoffeeBean->save();
 
         return back();

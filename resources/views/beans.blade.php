@@ -8,7 +8,7 @@
             <td>{{ $beans->id }} </td>
             <td>{{ $beans->name }} </td>
             <td>{{ $beans->caffeine_level}}</td>
-            <td></td>
+            <td>${{ $beans->cost}}/lb</td>
         </tr>
 
         @endforeach

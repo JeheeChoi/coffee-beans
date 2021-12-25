@@ -10,6 +10,6 @@ class CoffeeBean extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'caffeine_level'
+        'name', 'caffeine_level', 'cost'
     ];
 }
