@@ -18,16 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'welcome');
 
 // Get request for beans and return the view of beans
-Route::get('beans', function () {
-
-    $beans = [
-        'casi cielo',
-        'algo mas',
-        'cafe'
-    ];
-
-
-    return view('beans', [
-        'beans' => $beans,
-    ]);
-});
+Route::get('beans', 'App\Http\Controllers\BeansController@list');
