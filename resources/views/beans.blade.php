@@ -4,7 +4,13 @@
 
         @foreach ($beans as $beans)
         <!-- Only shows coffee beans' name attritube on the page -->
-        <li>{{ $beans->name }} ({{ $beans->caffeine_level}})</li>
+        <tr>
+            <td>{{ $beans->id }} </td>
+            <td>{{ $beans->name }} </td>
+            <td>{{ $beans->caffeine_level}}</td>
+            <td></td>
+        </tr>
+
         @endforeach
 
 @endsection
