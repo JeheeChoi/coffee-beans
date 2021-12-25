@@ -5,3 +5,5 @@
     <li>{{ $beans }}</li>
     @endforeach
 </ul>
+
+<a href="/"><h1>Home</h1></a>
