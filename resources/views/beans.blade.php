@@ -1,9 +1,13 @@
-<h1>Beans List</h1>
+@extends('welcome')
 
-<ul>
-    @foreach ($beans as $beans)
-    <li>{{ $beans }}</li>
-    @endforeach
-</ul>
+@section('content')
+    <h1>Beans List</h1>
 
-<a href="/"><h1>Home</h1></a>
+    <ul>
+        @foreach ($beans as $beans)
+        <li>{{ $beans }}</li>
+        @endforeach
+    </ul>
+
+    <a href="/"><h1>Home</h1></a>
+@endsection

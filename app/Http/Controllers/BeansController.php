@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\CoffeeBean;
 
 use Illuminate\Http\Request;
 
@@ -9,13 +10,9 @@ class BeansController extends Controller
 {
     public function list()
     {
-        $beans = [
-            'casi cielo',
-            'algo mas',
-            'cafe',
-            'J'
-        ];
+        $beans = CoffeeBean::all();
 
+        // dd($beans);
 
         return view('beans', [
             'beans' => $beans,
