@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Simplified version of get page
+// First argument - url, second argument - view
+Route::view('/', 'welcome');
+
+// Get request for beans and return the view of beans
+Route::get('beans', function () {
+
+    $beans = [
+        'casi cielo',
+        'algo mas',
+        'cafe'
+    ];
+
+
+    return view('beans', [
+        'beans' => $beans,
+    ]);
 });
