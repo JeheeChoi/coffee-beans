@@ -140,17 +140,15 @@
                 </div>
 
                 <!-- Home button -->
-                <a href="/"><button>Home</button></a>
-
 
 
                 <!-- MAIN CONTENT HERE -->
                 @yield('content')
-                <p>
-                    Coded by J, Powered by Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                </p>
-            </div>
 
+                <div>
+                    <h4>Coded by J, Powered by Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</p>
+                </div>
+            </div>
         </div>
     </body>
 </html>

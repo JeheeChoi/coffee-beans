@@ -3,13 +3,13 @@
 @section('content')
 
     <!-- INDEX HEADING -->
-    <div>
-        <h2>My Coffee Beans</h2>
-    </div>
-    <!-- INDEX COFFEE BEANS table shows HERE-->
 
+    <h2>My Coffee Beans</h2>
     <!-- TABLE HEAD ROW -->
     <ul class="responsive-table">
+        <div>
+            <a href="/"><button>Home</button></a>
+        </div>
         <li class="table-header">
         <div class="col col-1">ID</div>
         <div class="col col-2">NAME</div>

@@ -62,6 +62,18 @@ li {
   flex-basis: 25%;
 }
 
+button {
+  padding: 2px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 1px solid #555555;
+}
 
 @media all and (max-width: 767px) {
   .table-header {
@@ -91,8 +103,6 @@ li {
   }
 }
 
-.responsive-table {
-
-
-
+p {
+    color: red;
 }

@@ -8,6 +8,9 @@
         </div>
 
             <div>
+                <div>
+                    <a href="/"><button>Home</button></a>
+                </div>
                 <form action="/beans/{{ $beans->id }}" method="POST" class="form-control">
                     @method('PUT')
                     @csrf
