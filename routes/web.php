@@ -20,5 +20,8 @@ Route::get('/', 'App\Http\Controllers\BeansController@list');
 // First argument - url, second argument - view
 Route::get('beans', 'App\Http\Controllers\BeansController@list');
 
-// CREATE - Beans
+// CREATE Beans
 Route::post('beans', 'App\Http\Controllers\BeansController@store');
+
+// UPDATE Beans
+Route::get('beans/{beans}/edit', 'App\Http\Controllers\BeansController@edit');

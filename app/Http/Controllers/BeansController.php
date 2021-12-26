@@ -49,4 +49,12 @@ class BeansController extends Controller
         return back();
 
     }
+
+// UPDATE COFFEE BEAN
+    public function edit(CoffeeBean $beans)
+    {
+        return view('edit', [
+            'beans' => $beans,
+        ]);
+    }
 }
