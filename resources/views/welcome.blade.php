@@ -140,22 +140,17 @@
                 </div>
 
                 <!-- Home button -->
-                <a href="/">
-                    Home
-                </a>
+                <a href="/"><button>Home</button></a>
 
-                <!-- INDEX HEADING -->
-                <div>
-                    <h2>My Coffee Beans</h2>
-                </div>
+
 
                 <!-- MAIN CONTENT HERE -->
                 @yield('content')
+                <p>
+                    Coded by J, Powered by Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                </p>
+            </div>
 
-            </div>
-            <div class="footer">
-                Coded by J, Powered by Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-            </div>
         </div>
     </body>
 </html>

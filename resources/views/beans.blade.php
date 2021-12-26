@@ -1,6 +1,11 @@
 @extends('welcome')
 
 @section('content')
+
+    <!-- INDEX HEADING -->
+    <div>
+        <h2>My Coffee Beans</h2>
+    </div>
     <!-- INDEX COFFEE BEANS table shows HERE-->
 
     <!-- TABLE HEAD ROW -->
@@ -65,6 +70,7 @@
                 </li>
 
                 <li>
+                    <!-- NAME FIELD -->
                     <input type="text" name="name" value="{{ old('name') }}">
 
                     <select class="form-control" name="caffeine_level" value="{{ old('caffeine_level') }}">
@@ -105,6 +111,17 @@
 
                     <input type="text" name="country_of_origin" class="border-t border-r md:border-l" value="{{ old('country_of_origin') }}">
                     <button type="submit" class="ml-4">Submit</button>
+                </li>
+                <li>
+                    <!-- NAME FIELD ERROR MESSAGE -->
+                    <p>{{ $errors->first('name') }}<p>
+                    <p>{{ $errors->first('caffeine_level') }}<p>
+                    <p>{{ $errors->first('cost') }}<p>
+                    <p>{{ $errors->first('bean_type') }}<p>
+                    <p>{{ $errors->first('roast') }}<p>
+                    <p>{{ $errors->first('grind') }}<p>
+                    <p>{{ $errors->first('country_of_origin') }}<p>
+
                 </li>
             </ul>
         </form>
