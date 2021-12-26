@@ -23,5 +23,8 @@ Route::get('beans', 'App\Http\Controllers\BeansController@list');
 // CREATE Beans
 Route::post('beans', 'App\Http\Controllers\BeansController@store');
 
-// UPDATE Beans
+// GET SINGLE :ID Beans to edit
 Route::get('beans/{beans}/edit', 'App\Http\Controllers\BeansController@edit');
+
+// UPDATE Beans
+Route::put('beans/{beans}', 'App\Http\Controllers\BeansController@update');

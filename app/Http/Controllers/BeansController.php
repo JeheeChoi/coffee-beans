@@ -50,11 +50,40 @@ class BeansController extends Controller
 
     }
 
-// UPDATE COFFEE BEAN
+// GET SINGLE COFFEE BEAN WITH ID TO EDIT
     public function edit(CoffeeBean $beans)
     {
         return view('edit', [
             'beans' => $beans,
         ]);
     }
+
+    // UPDATE COFFEE BEAN
+    public function update(CoffeeBean $beans)
+    {
+        // dd(request()->all());
+
+        request()->validate([
+            'name' => 'required',
+            'caffeine_level' => 'required',
+            'cost' => 'required|numeric',
+            'bean_type' => 'required',
+            'roast' => 'required',
+            'grind' => 'required',
+            'country_of_origin' => 'required'
+        ]);
+
+        $beans->update([
+            'name' => request('name'),
+            'caffeine_level' => request('caffeine_level'),
+            'cost' => request('cost'),
+            'bean_type' => request('bean_type'),
+            'roast' => request('roast'),
+            'grind' => request('grind'),
+            'country_of_origin' => request('country_of_origin')
+        ]);
+
+        return redirect('/');
+    }
+
 }

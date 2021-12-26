@@ -47,38 +47,34 @@
 
                 <!-- Home button & Add new Beans button -->
                 <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                    <a href="/" class="underline text-gray-900 dark:text-white">Home</a>
                     <div class="ml-4 text-lg leading-7 font-semibold">
-                        <a href="beans" class="underline text-gray-900 dark:text-white">
-                            Add new beans
+                        <a href="/" class="underline text-gray-900 dark:text-white">
+                            HOME
                         </a>
                     </div>
                 </div>
 
+                <!-- MAIN CONTENT HERE -->
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-1">
                         <div class="p-6">
 
-
-
                         @yield('content')
 
-
-
-
                     </div>
                 </div>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
 
-                    </div>
 
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Coded by J, Powered by Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
+            </div>
+            <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
+                <div class="text-center text-sm text-gray-500 sm:text-left">
+
                 </div>
 
+                <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                    Coded by J, Powered by Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                </div>
             </div>
         </div>
     </body>

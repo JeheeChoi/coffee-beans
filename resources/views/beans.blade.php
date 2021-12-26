@@ -40,7 +40,7 @@
                     {{ $beans->roast }}
                     {{ $beans->grind }}
                     {{ $beans->country_of_origin }}
-                        <td><button type="submit">UPDATE</button>
+                        <td><a href="/beans/{{ $beans->id }}/edit"><button type="submit">UPDATE</button></a>
                         <td><button type="submit">DELETE</button>
                 </div>
             </div>
