@@ -28,3 +28,6 @@ Route::get('beans/{beans}/edit', 'App\Http\Controllers\BeansController@edit');
 
 // UPDATE Beans
 Route::put('beans/{beans}', 'App\Http\Controllers\BeansController@update');
+
+// DELETE Beans
+Route::get('beans/{beans}', 'App\Http\Controllers\BeansController@delete');

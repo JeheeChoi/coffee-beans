@@ -36,6 +36,7 @@
                 </div>
             @endif
 
+            <!-- Laravel Logo here -->
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
@@ -45,11 +46,11 @@
                     </svg>
                 </div>
 
-                <!-- Home button & Add new Beans button -->
+                <!-- Home button -->
                 <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                     <div class="ml-4 text-lg leading-7 font-semibold">
                         <a href="/" class="underline text-gray-900 dark:text-white">
-                            HOME
+                            Home
                         </a>
                     </div>
                 </div>
@@ -61,13 +62,17 @@
 
                         @yield('content')
 
-                        </div>
                     </div>
                 </div>
 
-                <!-- FOOTER -->
-                <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                    Coded by J, Powered by Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
+                    <div class="text-center text-sm text-gray-500 sm:text-left">
+
+                    </div>
+
+                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                        Coded by J, Powered by Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                    </div>
                 </div>
 
             </div>

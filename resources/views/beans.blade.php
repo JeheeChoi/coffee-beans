@@ -43,7 +43,12 @@
                     {{ $beans->grind }}
                     {{ $beans->country_of_origin }}
                         <td><a href="/beans/{{ $beans->id }}/edit"><button type="submit">UPDATE</button></a>
-                        <td><button type="submit">DELETE</button>
+                        <td><a href="/beans/{{ $beans->id }}" method="DELETE"><button type="submit">DELETE</button></a>
+                        <!-- <form action="/beans/{{ $beans-> id }}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Delete</button>
+                        </form> -->
                 </div>
             </div>
         </div>
@@ -141,8 +146,6 @@
                             </div>
 
                                 <!-- COUNTRY OF ORIGIN field -->
-                            <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-
                                 <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">ORIGIN :
                                     <input type="text" name="country_of_origin" class="border-t border-r md:border-l" value="{{ old('country_of_origin') }}">
                                     <div>
@@ -151,6 +154,7 @@
                                 </div>
                                 <br/>
                                 <button type="submit" class="ml-4">Submit</button>
+
                             </div>
                         </form>
                     </div>

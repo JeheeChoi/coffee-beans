@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 // Coffee-Beans-dedicated data fetch controller
 class BeansController extends Controller
 {
-// INDEX COFFEE BEANS
+    // INDEX COFFEE BEANS
     public function list()
     {
         $beans = CoffeeBean::all();
@@ -20,7 +20,7 @@ class BeansController extends Controller
         ]);
     }
 
-// POST AND UPDATE INDEX COFFEE BEANS
+    // POST AND UPDATE INDEX COFFEE BEANS
     public function store()
     {
         // input value 'name' is required in order to POST a new CoffeeBean
@@ -50,7 +50,7 @@ class BeansController extends Controller
 
     }
 
-// GET SINGLE COFFEE BEAN WITH ID TO EDIT
+    // GET SINGLE COFFEE BEANS INFO WITH ID TO EDIT
     public function edit(CoffeeBean $beans)
     {
         return view('edit', [
@@ -58,7 +58,7 @@ class BeansController extends Controller
         ]);
     }
 
-    // UPDATE COFFEE BEAN
+    // UPDATE COFFEE BEANS
     public function update(CoffeeBean $beans)
     {
         // dd(request()->all());
@@ -82,6 +82,15 @@ class BeansController extends Controller
             'grind' => request('grind'),
             'country_of_origin' => request('country_of_origin')
         ]);
+
+        return redirect('/');
+    }
+
+    // DELETE COFFEE BEANS
+    public function delete($id)
+    {
+        $data = CoffeeBean::find($id);
+        $data->delete();
 
         return redirect('/');
     }
