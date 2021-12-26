@@ -2,19 +2,19 @@
 
 @section('content')
 
-    <div class="grid grid-cols-1 md:grid-cols-1">
+    <div>
 
-        <div class="ml-4 text-lg leading-7 font-semibold">
+        <div>
             Update Beans Info
         </div>
 
-        <div class="p-6">
-            <div class="flex items-center">
+        <div>
+            <div>
                 <form action="/beans/{{ $beans->id }}" method="POST" class="form-control">
                     @method('PUT')
                     @csrf
                     <!-- Name field -->
-                    <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">NAME :
+                    <div>NAME :
                         <input type="text" name="name" class="border-t border-r md:border-l" value="{{ $beans->name }}">
                     <!-- //Shows error message "The name field is required" -->
                         <div>
@@ -23,7 +23,7 @@
                     </div>
 
                     <!-- CAFFEINE LEVEL field -->
-                    <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">CAFFEINE LEVEL :
+                    <div>CAFFEINE LEVEL :
                         <select class="form-control" name="caffeine_level" value="{{ $beans->caffeine_level }}">
                             <option selected value="" disabled>SELECT</option>
                             <option value="decaf">Decaf</option>
@@ -37,7 +37,7 @@
                     </div>
 
                     <!-- COST field -->
-                    <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">COST :
+                    <div>COST :
                         <input type="text" name="cost" class="border-t border-r md:border-l" value="{{ $beans->cost }}"></input><span style="margin-left:10px;">/lb</span>
                     </div>
                     <div>
@@ -45,7 +45,7 @@
                     </div>
 
                     <!-- BEAN TYPE field -->
-                    <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">BEAN TYPE :
+                    <div>BEAN TYPE :
                         <select class="form-control" name="bean_type" value="{{ $beans->bean_type }}">
                             <option selected value="" disabled>SELECT</option>
                             <option value="Arabica">ARABICA</option>
@@ -60,7 +60,7 @@
                     </div>
 
                     <!-- ROAST field -->
-                    <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">ROAST :
+                    <div>ROAST :
                         <select class="form-control" name="roast" value="{{ $beans->roast }}">
                             <option selected value="" disabled>SELECT</option>
                             <option value="lightk">LIGHT</option>
@@ -74,7 +74,7 @@
                     </div>
 
                     <!-- GRIND field -->
-                    <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">GRIND :
+                    <div>GRIND :
                         <select class="form-control" name="grind" value="{{ $beans->grind }}">
                             <option selected value="" disabled>SELECT</option>
                             <option value="fine">FINE</option>
@@ -88,7 +88,7 @@
                     </div>
 
                     <!-- COUNTRY OF ORIGIN field -->
-                    <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">ORIGIN :
+                    <div>ORIGIN :
                         <input type="text" name="country_of_origin" class="border-t border-r md:border-l" value="{{ $beans->country_of_origin }}">
                         <div>
                             {{ $errors->first('country_of_origin') }}
