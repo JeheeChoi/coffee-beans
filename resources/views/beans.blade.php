@@ -10,6 +10,9 @@
             <td>{{ $beans->caffeine_level }}</td>
             <td>${{ $beans->cost }}/lb</td>
             <td>{{ $beans->bean_type }}</td>
+            <td>{{ $beans->roast }}</td>
+            <td>{{ $beans->grind }}</td>
+            <td>{{ $beans->country_of_origin }}</td>
         </tr>
 
         @endforeach

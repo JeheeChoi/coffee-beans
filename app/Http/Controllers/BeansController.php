@@ -28,7 +28,10 @@ class BeansController extends Controller
             'name' => 'required',
             'caffeine_level' => 'required',
             'cost' => 'required|numeric',
-            'bean_type' => 'required'
+            'bean_type' => 'required',
+            'roast' => 'required',
+            'grind' => 'required',
+            'country_of_origin' => 'required'
         ]);
 
         // dd(request('name'));
@@ -37,6 +40,10 @@ class BeansController extends Controller
         $CoffeeBean->caffeine_level = request('caffeine_level');
         $CoffeeBean->cost = request('cost');
         $CoffeeBean->bean_type = request('bean_type');
+        $CoffeeBean->roast = request('roast');
+        $CoffeeBean->grind = request('grind');
+        $CoffeeBean->country_of_origin = request('country_of_origin');
+
         $CoffeeBean->save();
 
         return back();

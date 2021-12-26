@@ -137,6 +137,7 @@
                                                             {{ $errors->first('cost') }}
                                                         </div>
 
+                                                        <!-- BEAN TYPE field -->
                                                         <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">BEAN TYPE :
                                                             <select class="form-control" name="bean_type" value="{{ old('bean_type') }}">
                                                                 <option selected value="" disabled>SELECT</option>
@@ -150,6 +151,44 @@
                                                                 {{ $errors->first('bean_type') }}
                                                             </div>
                                                         </div>
+
+                                                        <!-- ROAST field -->
+                                                        <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">ROAST :
+                                                            <select class="form-control" name="roast" value="{{ old('roast') }}">
+                                                                <option selected value="" disabled>SELECT</option>
+                                                                <option value="lightk">LIGHT</option>
+                                                                <option value="medium">MEDIUM</option>
+                                                                <option value="dark">DARK</option>
+                                                                <option value="french">FRENCH</option>
+                                                            </select>
+                                                            <div>
+                                                                {{ $errors->first('roast') }}
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- GRIND field -->
+                                                        <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">GRIND :
+                                                            <select class="form-control" name="grind" value="{{ old('grind') }}">
+                                                                <option selected value="" disabled>SELECT</option>
+                                                                <option value="fine">FINE</option>
+                                                                <option value="medium">MEDIUM</option>
+                                                                <option value="coarse">COARSE</option>
+                                                                <option value="whole-bean">WHOLE-BEAN</option>
+                                                            </select>
+                                                            <div>
+                                                                {{ $errors->first('grind') }}
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- COUNTRY OF ORIGIN field -->
+                                                        <div class="ml-4 text-sm leading-7 font-semibold text-gray-900 dark:text-white">ORIGIN :
+                                                            <input type="text" name="country_of_origin" class="border-t border-r md:border-l" value="{{ old('country_of_origin') }}">
+                                                            <div>
+                                                                {{ $errors->first('country_of_origin') }}
+                                                            </div>
+                                                        </div>
+
+
                                                     <button type="submit">Submit</button>
                                                 </div>
                                             </div>

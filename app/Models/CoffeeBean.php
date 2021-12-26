@@ -10,6 +10,6 @@ class CoffeeBean extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'caffeine_level', 'cost', 'bean_type'
+        'name', 'caffeine_level', 'cost', 'bean_type', 'roast', 'grind', 'country_of_origin'
     ];
 }
