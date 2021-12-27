@@ -19,6 +19,14 @@ has following attributes:
 
 ## `CoffeeBeans` Routes
 
+| HTTP Method   | URL Path           | Result                           | 
+|:--------------|:-------------------|:---------------------------------| 
+| GET           | /                  | index of `CoffeeBeans            | 
+| POST          | /beans             | create `CoffeeBeans              | 
+| GET           | /beans/`id`/edit   | show single `CoffeeBeans` info   | 
+| PUT           | /beans/`id`        | update `CoffeeBeans`.            | 
+| DELETE        | /beans/`id`        | delete `CoffeeBeans`.            |
+
 
 
 ## Technologies Used
