@@ -7,8 +7,8 @@ This is a simple PHP - Laravel CRUD web application that allows users to Create/
 ![Screentshot1](https://i.imgur.com/bUTSkGb.jpg)
 
 
-## `CoffeeBeans` Model Schema has following attributes:
-
+## `CoffeeBeans` Model Schema
+has following attributes:
 - Id
 - Name (text)
 - Caffeine Level (One of: decaf, low, medium, high)
@@ -16,6 +16,9 @@ This is a simple PHP - Laravel CRUD web application that allows users to Create/
 - Bean Type (One of: Arabica, Robusta, Liberca, Excelsa, Other) Roast (One of: dark, medium, light, french)
 - Grind (One of: whole-bean, fine, medium, coarse)
 - Country of Origin (text)
+
+## `CoffeeBeans` Routes
+
 
 
 ## Technologies Used
